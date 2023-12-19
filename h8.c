@@ -16,8 +16,10 @@ char maze[N][N]={
 };
 char mark[N][N];
 void push(Stack *s,Axis e){
-  s->top++;
-  s->block[s->top]=e;
+ if(s->top<(N*N-1)){
+    s->top++;
+    s->block[s->top]=e;
+  }
 }
 Axis pop(Stack *s){
   Axis temp={-1,-1};
