@@ -64,7 +64,7 @@ int main(){
       printf("NO EXIT\n");
       return 0;
     }
-    printf("move to %d %d\n",current.x,current.y);
+    //printf("move to %d %d\n",current.x,current.y);
   }
   for(int i=0;i<10;i++){
     for (int j = 0; j < 10; j++){
