@@ -19,7 +19,6 @@ char mark[N][N];
 char mark2[N][N];
 
 Axis findMove(Stack *s,Axis c){
-  int l=0;
   for(int dx=-1;dx<2;dx++){
     for(int dy=-1;dy<2;dy++){
       if(dx*dy==0&&(dx!=0||dy!=0)){
@@ -30,15 +29,10 @@ Axis findMove(Stack *s,Axis c){
           if(maze[space.x][space.y]=='0' && mark[space.x][space.y]!='*'){
             mark[space.x][space.y]='*';
             push(s,space);
-            l=1;
           }
         }          
       }
     }
-  }
-  if(!l) {
-    mark[c.x][c.y]='0';
-    // printf("%d %d\n",c.x,c.y);
   }
   return pop(s);
 }
