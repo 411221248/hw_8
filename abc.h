@@ -13,5 +13,6 @@ typedef struct {
     Axis block[N*N];
     int top;
 }Stack;
-
+void push(Stack *s,Axis e);
+Axis pop(Stack *s);
 #endif
